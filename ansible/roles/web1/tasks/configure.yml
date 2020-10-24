@@ -1,0 +1,4 @@
+
+---
+ - name: Adding website
+   copy: src=index1.html dest=/var/www/html

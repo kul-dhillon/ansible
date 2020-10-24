@@ -1,0 +1,27 @@
+
+---
+  - hosts: slave1
+    become: yes
+    tasks:
+    - debug:
+        msg: "Apache Role is ready to start"
+    - import_role:
+        name: web1
+    - debug:
+        msg: "Apache Role stoping here"
+    - debug:
+        msg: "Java Role is ready to start"
+    - import_role:
+        name: java-role
+    - debug:
+        msg: "Java Role stopping here"
+  - hosts: slave2
+    become: yes
+    tasks:
+    - debug:
+        msg: "Nginx Role is ready to start"
+    - import_role:
+        name: web2
+    - debug:
+        msg: "Nginx Role stoping here"
+   

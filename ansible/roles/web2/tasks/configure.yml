@@ -1,0 +1,4 @@
+
+---
+  - name: Adding a webpage
+    copy: src=index2.html dest=/var/www/html
